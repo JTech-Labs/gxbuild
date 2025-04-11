@@ -32,6 +32,9 @@ elif command -v dnf > /dev/null; then
 	echo "Installing dependencies"
 	sudo dnf install alsa-lib-devel mesa-libGL-devel libX11-devel \
 	libXrandr-devel libXi-devel libXcursor-devel libXinerama-devel
+ elif command -v pacman > /dev/null; then
+ 	echo "Installing dependencies"
+  	sudo pacman -Syu alsa-lib mesa libx11 libxrandr libxi libxcursor libxinerama
 fi
 
 # ______________________________________________________________________________
